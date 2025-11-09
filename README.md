@@ -17,7 +17,7 @@ Al principio me pareció complicado porque nunca había usado una plataforma com
 También, aprendí a escribir en formato **Markdown**, que sirve para dar estructura y estilo al texto, como los títulos, listas o bloques de código. 
 
 ### Referencias de IA
-- ChatGPT: conversación sobre la creación de página personal en GitHub Pages y explicación de variables en Python (https://chat.openai.com/share/...)
+- ChatGPT: conversación sobre la página en GitHub Pages y explicación de variables en Python (https://chat.openai.com/share/...)
 ### Ejemplo en Python
 ```python
 # Este programa guarda un número y muestra un mensaje en pantalla
