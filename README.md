@@ -19,6 +19,7 @@ Una **variable** es un espacio en la memoria del computador donde se guarda un v
 x = 42
 mensaje = f"El valor de x es {x}"
 print(mensaje)
+
 ## Reflexión personal
 
 Esta actividad me ayudó a entender cómo funciona GitHub y cómo puedo usarlo para guardar y mostrar mis proyectos.  
