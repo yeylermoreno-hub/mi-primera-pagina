@@ -20,7 +20,8 @@ También, aprendí a escribir en formato **Markdown**, que sirve para dar estruc
 - ChatGPT: conversación sobre la página en GitHub Pages y explicación de variables en Python (https://chat.openai.com/share/...)
 ### Ejemplo en Python
 ```python
-# Este programa guarda un número y muestra un mensaje en pantalla
-x = 42
-mensaje = f"El valor de x es {x}"
-print(mensaje)
+numero = 7
+if numero % 2 == 0:
+    print(f"El número {numero} es par.")
+else:
+    print(f"El número {numero} es impar.")
