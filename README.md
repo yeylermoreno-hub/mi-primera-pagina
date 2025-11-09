@@ -19,3 +19,10 @@ Una **variable** es un espacio en la memoria del computador donde se guarda un v
 x = 42
 mensaje = f"El valor de x es {x}"
 print(mensaje)
+## Reflexión personal
+
+Esta actividad me ayudó a entender cómo funciona GitHub y cómo puedo usarlo para guardar y mostrar mis proyectos.  
+Al principio me pareció complicado porque nunca había usado una plataforma como esta, pero paso a paso fui comprendiendo que GitHub es muy útil para cualquier persona que esté aprendiendo programación.
+También, aprendí a escribir en formato **Markdown**, que sirve para dar estructura y estilo al texto, como los títulos, listas o bloques de código.  
+### Referencias de IA
+- ChatGPT: conversación sobre la creación de página personal en GitHub Pages y explicación de variables en Python (https://chat.openai.com/share/...)
