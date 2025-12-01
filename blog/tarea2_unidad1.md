@@ -31,10 +31,10 @@ if gira.lower() == 's':
 pasos_arriba = int(input("¿Cuántos pasos arriba? "))
 arriba(pasos_arriba)
 
-"""
+```
 Explicación: Este código crea funciones simples que imprimen símbolos de flechas para simular movimientos. Usa input() para que el usuario decida los pasos y si gira, recreando el comportamiento básico de la tortuga con texto interactivo.
 Salida esperada (ejemplo con inputs: 3 adelante, s para girar, 2 arriba):
-"""
+```python
 Simulador de tortuga con texto. ¡Empecemos!
 ¿Cuántos pasos adelante? 3
 → → → 
@@ -42,9 +42,11 @@ Simulador de tortuga con texto. ¡Empecemos!
 Girando 90° a la derecha...
 ¿Cuántos pasos arriba? 2
 ↑ ↑
+```
 Reto 2: Tortuga bajando
 Enunciado original: Crea el rastro de una tortuga moviéndose hacia abajo usando únicamente print() e input().
 La salida esperada es similar a [figura de tortuga bajando, que simula una tortuga ASCII descendiendo].
+```python
 # Dibujo ASCII simple de la tortuga
 def dibujar_tortuga():
     print("    ____")
@@ -64,8 +66,10 @@ for i in range(pasos_bajar):
     print("↓")  # Flecha de movimiento
     posicion += 1
     print()  # Línea en blanco para separación
+```
 Explicación: El programa dibuja una tortuga en ASCII art y la "baja" agregando espacios crecientes antes de cada dibujo, simulando descenso. Usa input() para el número de pasos y repite el rastro vertical.
 Salida esperada (ejemplo con 3 pasos):
+```python
 ¿Cuántos pasos bajar? 3
 
 Tortuga bajando ↓↓↓
@@ -87,8 +91,10 @@ Tortuga bajando ↓↓↓
       |  O O |
        \ -- /
         ---- ↓
+```
 Reto 3: Girar y dibujar usando solo print() e input()
 Enunciado original: Ahora la tortuga no solo avanza: también gira. Observa cómo lo hace la versión gráfica: [código turtle que dibuja una L]. Salida (versión gráfica): se dibuja una “L”.
+```python
 # Direcciones posibles: 0=derecha (→), 1=abajo (↓), 2=izquierda (←), 3=arriba (↑)
 direccion_actual = 0
 posicion_x = 0
@@ -126,8 +132,10 @@ while True:
             imprimir_movimiento(simbolos[direccion_actual], cantidad)
         except:
             print("Comando inválido. Usa 'adelante 5' o 'girar'.")
+```
 Explicación: Simula giros cambiando la dirección (usando un índice modular) y avanza imprimiendo el símbolo correspondiente. Es interactivo con input(), y dibuja una "L" si das "adelante 5" → "girar" → "adelante 5".
 Salida esperada (ejemplo para dibujar L):
+```python
 Simulador de tortuga giratoria. Comando: 'adelante X' o 'girar'
 ¿Qué hace la tortuga? (adelante X / girar / salir): adelante 5
 → → → → → 
@@ -136,8 +144,10 @@ Giró a: ↓
 ¿Qué hace la tortuga? (adelante X / girar / salir): adelante 5
 ↓ ↓ ↓ ↓ ↓ 
 ¿Qué hace la tortuga? (adelante X / girar / salir): salir
+```
 Reto 4: Encapsula los comportamientos anteriores usando funciones
-Enunciado original: Reescribe los retos anteriores creando funciones que representen los movimientos de la tortuga solo con texto. Usa las siguientes funciones como interfaz: adelante(n) # Dibuja el movimiento hacia la derecha (→) por n pasos; abajo(n) # Dibuja el movimiento hacia abajo (↓) por n pasos. Por ejemplo, al ejecutar: adelante(5); abajo(3) Debería producir un patrón en forma de L como en la figura.
+Enunciado original: Reescribe los retos anteriores creando funciones que representen los movimientos de la tortuga solo con texto. Usa las siguientes funciones como interfaz: adelante(n) # Dibuja el movimiento hacia la derecha (→) por n pasos; abajo(n) # Dibuja el movimiento hacia abajo (↓) por n pasos. Por ejemplo, al ejecutar: adelante(5); abajo(3) Debería producir un patrón en forma de L como en la figura
+```python
 # Función para avanzar horizontalmente
 def adelante(n):
     print("→ " * n)
@@ -151,14 +161,18 @@ print("Dibujando una L con funciones encapsuladas:")
 adelante(5)  # Primera parte horizontal
 print()  # Espacio para el giro (simulado)
 abajo(3)  # Parte vertical
+``` 
 Explicación breve: Encapsulo los movimientos en funciones reutilizables adelante() y abajo(), como se pide. Llamándolas en secuencia, se genera el patrón "L" con texto, reutilizando código de retos previos.
 Salida esperada:
+```python
 Dibujando una L con funciones encapsuladas:
 → → → → → 
 
 ↓ ↓ ↓
+``` 
 Reto 5: La tortuga baja las escaleras
 Enunciado original: Ajusta tus funciones para que la tortuga pueda bajar escalones. Cada escalón debe conservar la posición horizontal acumulada y dibujar correctamente tanto el tramo horizontal como el vertical. Por ejemplo: # Escalón 1 adelante(5) abajo(2) # Escalón 2 adelante(5) abajo(2) # Escalón 3 adelante(5) abajo(2) Comportamiento esperado: [figura de escaleras descendiendo, con tramos → y ↓ alternados, conservando alineación horizontal].
+```python
 # Funciones ajustadas para escaleras (conservan posición horizontal con espacios)
 posicion_horizontal = 0  # Variable global para acumular posición X
 
@@ -177,8 +191,10 @@ for escalon in range(3):
     adelante(5)  # Tramo horizontal del escalón
     abajo(2)     # Descenso vertical
     print()      # Separación entre escalones
+``` 
 Explicación: Ajusto las funciones para usar una variable global que acumule la posición horizontal (espacios crecientes). Cada escalón avanza 5 → y baja 2 ↓, conservando la alineación, simulando escaleras descendentes.
 Salida esperada:
+```python
 La tortuga baja las escaleras:
 → → → → → 
 ↓ ↓ 
@@ -188,9 +204,9 @@ La tortuga baja las escaleras:
 
         → → → → → 
         ↓ ↓
+ ``` 
 Referencias de IA
 Usé Grok (de xAI) para generar y refinar estas soluciones. Específicamente:
 
-Grok: Conversación sobre la solución del Reto 1 al 5 (enlace: [esta conversación en el chat de Grok]). Me ayudó a extraer enunciados exactos del sitio del curso y a crear códigos limpios con explicaciones simples, asegurando que usen solo print() e input().
-
+Grok: Conversación sobre la solución del Reto 1 al 5  enlace:[esta conversación en el chat de Grok]. Me ayudó a extraer enunciados exactos del sitio del curso.
 Toda la lógica fue revisada y adaptada por mí para ajustarse a los requisitos.
